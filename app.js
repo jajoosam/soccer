@@ -1,6 +1,7 @@
 var player;
 var ball;
 var goal;
+var noOfGoals = 0;
 function setup() {
   createCanvas(255, 500);
   player = createSprite(125.5,250, 50, 50);
@@ -22,9 +23,19 @@ function draw() {
   ball.bounce(player);
 
   if(ball.overlap(goal)){
-    ball.remove();
-  }
+    ball.position.x = 125.5;
+    ball.position.y = 250;
 
+    noOfGoals += 1;
+    if(noOfGoals == 1){
+        document.getElementById("additonal-text").innerHTML = " goal scored";
+        document.getElementById("goals").innerHTML = noOfGoals;
+    }
+    else{
+        document.getElementById("additonal-text").innerHTML = " goals scored";
+        document.getElementById("goals").innerHTML = noOfGoals;
+    }
+}
   if(player.overlap(borderRight)){
     player.position.x = 35;
   }
