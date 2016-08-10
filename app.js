@@ -17,8 +17,18 @@ function draw() {
   background(300, 240, 220);
   drawSprites();
 
-  player.position.x = mouseX;
-  player.position.y = mouseY;
+  if (keyDown(RIGHT_ARROW)) {
+    player.position.x = player.position.x + 3;
+  }
+  if (keyDown(LEFT_ARROW)) {
+    player.position.x = player.position.x - 3;
+  }
+  if (keyDown(UP_ARROW)) {
+    player.position.y = player.position.y - 3;
+  }
+  if (keyDown(DOWN_ARROW)) {
+    player.position.y = player.position.y + 3;
+  }
 
   ball.bounce(player);
 
