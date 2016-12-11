@@ -5,7 +5,7 @@ var noOfGoals = 0;
 function setup() {
   createCanvas(255, 500);
   player1 = createSprite(125.5,250, 50, 50);
-  player2 = createSprite(125.5,250, 50, 50);
+  player2 = createSprite(25,50, 50, 50);
   ball = createSprite(125.5, 400, 25,25);
   goal = createSprite(125.5, 5, 100, 25);
   borderRight = createSprite(255, 0, 10, 1000);
