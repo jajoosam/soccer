@@ -31,7 +31,7 @@ function draw() {
     player1.position.y = player1.position.y + 3;
   }
   
-    if (keyDown(83)) {
+    if (keyDown(68)) {
     player2.position.x = player2.position.x + 3;
   }
   if (keyDown(65)) {
@@ -40,7 +40,7 @@ function draw() {
   if (keyDown(87)) {
     player2.position.y = player2.position.y - 3;
   }
-  if (keyDown(68)) {
+  if (keyDown(83)) {
     player2.position.y = player2.position.y + 3;
   }
 
