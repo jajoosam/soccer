@@ -4,7 +4,8 @@ var goal;
 var noOfGoals = 0;
 function setup() {
   createCanvas(255, 500);
-  player = createSprite(125.5,250, 50, 50);
+  player1 = createSprite(125.5,250, 50, 50);
+  player2 = createSprite(125.5,250, 50, 50);
   ball = createSprite(125.5, 400, 25,25);
   goal = createSprite(125.5, 5, 100, 25);
   borderRight = createSprite(255, 0, 10, 1000);
@@ -18,19 +19,35 @@ function draw() {
   drawSprites();
 
   if (keyDown(RIGHT_ARROW)) {
-    player.position.x = player.position.x + 3;
+    player1.position.x = player1.position.x + 3;
   }
   if (keyDown(LEFT_ARROW)) {
-    player.position.x = player.position.x - 3;
+    player1.position.x = player1.position.x - 3;
   }
   if (keyDown(UP_ARROW)) {
-    player.position.y = player.position.y - 3;
+    player1.position.y = player1.position.y - 3;
   }
   if (keyDown(DOWN_ARROW)) {
-    player.position.y = player.position.y + 3;
+    player1.position.y = player1.position.y + 3;
+  }
+  
+    if (keyDown(S)) {
+    player2.position.x = player2.position.x + 3;
+  }
+  if (keyDown(A)) {
+    player2.position.x = player2.position.x - 3;
+  }
+  if (keyDown(W)) {
+    player2.position.y = player2.position.y - 3;
+  }
+  if (keyDown(S)) {
+    player2.position.y = player2.position.y + 3;
   }
 
-  ball.bounce(player);
+  ball.bounce(player1);
+  ball.bounce(player2);
+  player1.bounce(player2);
+  player2.bounce(player1);
 
   if(ball.overlap(goal)){
     ball.position.x = 125.5;
