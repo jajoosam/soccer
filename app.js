@@ -61,20 +61,36 @@ function draw() {
         document.getElementById("goals").innerHTML = noOfGoals;
     }
 }
-  if(player.overlap(borderRight)){
-    player.position.x = 35;
+  if(player1.overlap(borderRight)){
+    player1.position.x = 35;
   }
 
-  if(player.overlap(borderLeft)){
-    player.position.x = 220;
+  if(player1.overlap(borderLeft)){
+    player1.position.x = 220;
   }
 
-  if(player.overlap(borderBottom)){
-    player.position.y = 35;
+  if(player1.overlap(borderBottom)){
+    player1.position.y = 35;
   }
 
-  if(player.overlap(borderTop)){
-    player.position.y = 465;
+  if(player1.overlap(borderTop)){
+    player1.position.y = 465;
+  }
+  
+    if(player2.overlap(borderRight)){
+    player2.position.x = 35;
+  }
+
+  if(player2.overlap(borderLeft)){
+    player2.position.x = 220;
+  }
+
+  if(player2.overlap(borderBottom)){
+    player2.position.y = 35;
+  }
+
+  if(player2.overlap(borderTop)){
+    player2.position.y = 465;
   }
 
 }
