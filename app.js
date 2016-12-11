@@ -31,23 +31,21 @@ function draw() {
     player1.position.y = player1.position.y + 3;
   }
   
-    if (keyDown(S)) {
+    if (keyDown(83)) {
     player2.position.x = player2.position.x + 3;
   }
-  if (keyDown(A)) {
+  if (keyDown(65)) {
     player2.position.x = player2.position.x - 3;
   }
-  if (keyDown(W)) {
+  if (keyDown(87)) {
     player2.position.y = player2.position.y - 3;
   }
-  if (keyDown(S)) {
+  if (keyDown(68)) {
     player2.position.y = player2.position.y + 3;
   }
 
   ball.bounce(player1);
   ball.bounce(player2);
-  player1.bounce(player2);
-  player2.bounce(player1);
 
   if(ball.overlap(goal)){
     ball.position.x = 125.5;
